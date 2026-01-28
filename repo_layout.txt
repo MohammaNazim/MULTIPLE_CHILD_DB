@@ -1,0 +1,38 @@
+MULTIPLE_CHILD_DB/
+│
+├── alembic/
+│   ├── versions/                # DB migration versions
+│   ├── env.py                   # Alembic environment config
+│   ├── README                   # Alembic usage notes
+│   └── script.py.mako           # Migration template
+│
+├── app/
+│   ├── __init__.py
+│   │
+│   ├── main.py                  # FastAPI app entry point
+│   ├── auth.py                  # Authentication, JWT, password hashing
+│   │
+│   ├── database/
+│   │   ├── __init__.py
+│   │   ├── database.py          # Async DB engine & session
+│   │   ├── models.py            # SQLAlchemy ORM models
+│   │   └── schemas.py           # Pydantic schemas
+│   │
+│   ├── routes/
+│   │   ├── __init__.py
+│   │   ├── auth_routes.py       # Signup / Login / Token APIs
+│   │   ├── parent_routes.py     # Parent related APIs
+│   │   ├── admin_routes.py      # Admin-only APIs
+│   │   └── toy_routes.py        # Toy related APIs
+│   │
+│   └── __pycache__/              # Python cache (ignored in git)
+│
+├── venv/                         # Local virtual environment (git ignored)
+│
+├── .env                          # Environment variables (git ignored)
+├── .gitignore                    # Git ignore rules
+├── alembic.ini                   # Alembic main config
+├── Dockerfile                    # Docker build configuration
+├── requirements.txt              # Python dependencies
+├── repo_layout.txt               # Repository architecture overview
+└── README.md                     # Project documentation
